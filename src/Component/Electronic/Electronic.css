@@ -1,0 +1,18 @@
+.row-2 {
+  justify-content: space-between;
+  margin: 100px auto 50px;
+}
+
+.input {
+  padding: 5px 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid tomato;
+  border-radius: 10px;
+}
+.input input {
+  border: none;
+  outline: none;
+  padding: 2px;
+}
