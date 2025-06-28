@@ -143,8 +143,8 @@ small {
 
 @media screen and (max-width: 600px) {
   .row {
-    text-align: center;
-    padding-left: 0;
+    text-align: start;
+    padding: 0;
   }
   .col-2 img {
     max-width: 70%;
@@ -153,7 +153,8 @@ small {
   .col-2,
   .col-3,
   .col-4 {
-    flex-basis: 80%;
+    flex-basis: 100%;
+    padding: 20px;
   }
   .col-2 h1 {
     font-size: 25px;
@@ -162,7 +163,13 @@ small {
   }
   .col-2 p {
     font-size: 10px;
-    margin: 10px;
-    padding: 20px;
+    text-align: start;
+    margin-top: 10px;
+  }
+  .offer h1 {
+    font-size: 20px;
+  }
+  .offer p {
+    font-size: 10px;
   }
 }
