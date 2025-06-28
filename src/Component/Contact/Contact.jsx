@@ -8,7 +8,7 @@ const Contact = () => {
       <div>
         <form action="" className="place-order">
           <div className="place-order-left">
-            <p>Delivery Information</p>
+            <p className="titles">Delivery Information</p>
             <div className="multi-field">
               <input type="text" placeholder="First name" required />
               <input type="text" placeholder="Last name" required />

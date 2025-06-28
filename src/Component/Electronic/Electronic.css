@@ -16,3 +16,12 @@
   outline: none;
   padding: 2px;
 }
+
+@media screen and (max-width: 600px) {
+  .small-container h2 {
+    font-size: 15px;
+  }
+  .input input {
+    width: 100px;
+  }
+}
