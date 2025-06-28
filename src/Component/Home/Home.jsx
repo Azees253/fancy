@@ -94,11 +94,11 @@ const Home = () => {
             <div className="col-2">
               <p>Exclusively Available on Ecom</p>
               <h1>Smart Band 4</h1>
-              <small>
+              <div className="small">
                 The Mi Smart Band 4 is a smart fitness band that comes with a
                 0.95-inch AMOLED color display, heart rate monitoring, and up to
                 20 days of battery life.
-              </small>
+              </div>
 
               <Link to="/product" className="btn">
                 Buy Now &#8594;
