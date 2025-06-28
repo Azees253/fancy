@@ -147,15 +147,20 @@ small {
   }
   .col-2 img {
     max-width: 70%;
-    padding: 50px 0;
+    padding: 20px;
   }
   .col-2,
   .col-3,
   .col-4 {
-    flex-basis: 100%;
+    flex-basis: 80%;
   }
   .col-2 h1 {
     font-size: 25px;
     line-height: 35px;
+    margin-top: 5px;
+  }
+  .col-2 p {
+    font-size: 15px;
+    margin-top: 10px;
   }
 }
