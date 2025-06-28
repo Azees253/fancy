@@ -144,6 +144,7 @@ small {
 @media screen and (max-width: 600px) {
   .row {
     text-align: center;
+    padding-left: 0;
   }
   .col-2 img {
     max-width: 70%;
