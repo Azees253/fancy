@@ -1,16 +1,25 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css"; // Assuming you have a CSS file for styling
 import { MenuLink } from "./Menulink";
 import { StoreContext } from "./context/StorageContext";
+import { toast } from "react-toastify";
 
 const Navbar = ({ setShowLogin }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { getTotalAmount } = useContext(StoreContext);
+  const { getTotalAmount, token, setToken } = useContext(StoreContext);
 
   function handleClick() {
     setIsOpen({ clicked: !isOpen.clicked });
   }
+
+  const navigate = useNavigate();
+  const Logout = () => {
+    localStorage.removeItem("token");
+    setToken("");
+    navigate("/");
+    toast.success("Loggin Out");
+  };
   return (
     <div className="container">
       <div className="navbar">
@@ -35,9 +44,19 @@ const Navbar = ({ setShowLogin }) => {
           </ul>
         </div>
         <div className="signin-btn">
-          <button className="sign-btn" onClick={() => setShowLogin(true)}>
-            Sign in
-          </button>
+          {!token ? (
+            <button className="sign-btn" onClick={() => setShowLogin(true)}>
+              Sign in
+            </button>
+          ) : (
+            <div className="Logout">
+              <button onClick={() => navigate("/orders")}>My Orders</button>
+              <i
+                class="fa-solid fa-arrow-right-from-bracket"
+                onClick={Logout}
+              ></i>
+            </div>
+          )}
         </div>
         <div className="nav-search-icon">
           <Link to="/shopping">

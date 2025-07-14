@@ -35,3 +35,10 @@
   color: white;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .about-items-title {
+    grid-template-columns: 2fr 2fr 2fr 2fr 1fr 1fr;
+    font-size: 9px;
+  }
+}

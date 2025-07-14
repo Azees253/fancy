@@ -5,7 +5,7 @@ import "./Electronic.css";
 import { StoreContext } from "../../context/StorageContext";
 
 const Electronic = ({ category, setCatgory }) => {
-  const { electronic_Items } = useContext(StoreContext);
+  const { electronic_Items, url } = useContext(StoreContext);
 
   function handleClick(e) {
     const list = document.querySelectorAll("#row > div");
@@ -40,7 +40,7 @@ const Electronic = ({ category, setCatgory }) => {
             return (
               <div className="col-4" key={index}>
                 <Collection
-                  image={item.image}
+                  image={url + "/images/" + item.image}
                   title={item.name}
                   price={item.price}
                   rating={item.rating1}

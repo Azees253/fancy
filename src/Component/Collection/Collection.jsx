@@ -11,7 +11,7 @@ const Collection = ({ id, image, title, price, rating, half, desc }) => {
         <img src={image} alt="" />
         <div className="headers">
           <h4>{title}</h4>
-          <p>${price}</p>
+          <p>₹{price}</p>
           <div className="rating">
             <i className={rating}></i>
           </div>
